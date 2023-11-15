@@ -19,8 +19,8 @@ bug, create a related issue and demonstrate the bug with precise language.
 
 ### Code of Conduct
 
-Bear in mind that participation in this project implies an agreement to abide by the Contributor 
-Code of Conduct(CODE_OF_CONDUCT.md).
+Bear in mind that participation in this project implies an agreement to abide by the [Code of
+Conduct](CODE_OF_CONDUCT.md).
 
 ### Credits
 These guidelines for contribution are adapted from the [dplyr contributing guidelines](https://github.com/tidyverse/dplyr/blob/master/.github/CONTRIBUTING.md).
