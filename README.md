@@ -1,6 +1,6 @@
 # Save The Earth
 
-  - author: Tony Shum, Jing Wen, Aishwarya Nadimpally, Weilin Han
+Author: Tony Shum, Jing Wen, Aishwarya Nadimpally, Weilin Han
 
 A data analysis group project for DSCI 522 (Data Science workflows); a
 course in the Master of Data Science program at the University of
