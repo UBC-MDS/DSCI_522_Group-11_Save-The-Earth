@@ -8,7 +8,7 @@ British Columbia.
 
 ## About
 
-Here we attemp to build a prediction model using the k-nearest neighbours algorithm
+Here we attempt to build a prediction model using the k-nearest neighbours algorithm
 which can use energy consumption and energy generation measurements to predict CO2
 emission of certain country of next year. Our final prediction model perform pretty well
 on unseen test dataset, with $R^2$ of 0.975 and an overall accuracy calculated to be 0.976.
@@ -25,7 +25,7 @@ the link can be found [here](www.gapminder.org)).
 ## Report
 
 The final report can be found
-[here](https://ttimbers.github.io/breast_cancer_predictor/doc/breast_cancer_predict_report.html).
+[here](https://github.com/UBC-MDS/DSCI_522_Group-11_Save-The-Earth/blob/main/src/save_the_earth_model.html).
 
 ## Dependencies
 
