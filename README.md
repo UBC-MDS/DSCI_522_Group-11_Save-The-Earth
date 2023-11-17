@@ -20,7 +20,7 @@ accurate, thus we recomment continuing study to improve this prediction model.
 
 The data set that was used in this project is from World Bank via GAPMINDER.ORG, which is
 an independent Swedish foundation with no political, religious or economic affiliations and
-the link can be found [here](www.gapminder.org)).
+the link can be found [here](https://www.gapminder.org/)).
 
 ## Report
 
