@@ -59,3 +59,21 @@ The final report can be found
 The Save The Earth materials here are licensed under the
 Creative Commons Attribution 2.5 Canada License (CC BY 2.5 CA). If
 re-using/re-mixing please provide attribution and link to this webpage.
+
+## References
+
+<div id="refs" class="references hanging-indent">
+
+<div id="ref-Dua2019">
+
+Morice, C.P., J.J. Kennedy, N.A. Rayner, J.P. Winn, E. Hogan, R.E. Killick, R.J.H. Dunn, T.J. Osborn, P.D. Jones and I.R. Simpson (in press) An updated assessment of near-surface temperature change from 1850: the HadCRUT5 dataset. Journal of Geophysical Research (Atmospheres)
+
+</div>
+
+<div id="ref-Streetetal">
+
+Hannah Ritchie, Max Roser and Pablo Rosado (2020) - "CO₂ and Greenhouse Gas Emissions". Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/co2-and-greenhouse-gas-emissions'. <https://ourworldindata.org/co2-and-greenhouse-gas-emissions>.
+
+</div>
+
+</div>
