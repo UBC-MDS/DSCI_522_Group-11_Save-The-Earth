@@ -28,6 +28,5 @@ dependencies:
   - selenium<4.3.0
   - lightgbm
   - pip:
-    - joblib==1.1.0
     - mglearn
     - psutil>=5.7.2
