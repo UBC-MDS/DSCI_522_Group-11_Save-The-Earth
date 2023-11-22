@@ -20,5 +20,5 @@ dependencies:
   - eli5=0.13.0 
   - shap=0.43.0
   - pip:
-    - mglearn=0.2.0
+    - mglearn==0.2.0
     - psutil>=5.7.2
