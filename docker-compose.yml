@@ -1,0 +1,11 @@
+services:
+  book-env:
+    image: test10
+    ports:
+      - "8889:8888"
+    volumes:
+      - .:/home/jovyan/work
+    deploy:
+      resources:
+        limits:
+          memory: 5G
