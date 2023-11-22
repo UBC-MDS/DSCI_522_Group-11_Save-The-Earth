@@ -3,19 +3,19 @@ FROM quay.io/jupyter/minimal-notebook:2023-11-19
 
 RUN conda install -y \  
     python=3.11.* \
-    pip \
+    pip=23.3.1 \
     ipykernel=6.26.0 \
-    nb_conda_kernels \
+    nb_conda_kernels=2.3.1 \
     altair=5.1.2 \
-    scipy \
+    scipy=1.11.3 \
     matplotlib>=3.2.2 \
     scikit-learn>=1.3.1 \
     requests>=2.24.0 \
-    graphviz \
-    python-graphviz \
-    eli5 \
-    shap 
+    graphviz=9.0.0 \
+    python-graphviz=0.20.1 \
+    eli5=0.13.0 \
+    shap=0.43.0 
 
 RUN pip install \
-    mglearn \
+    mglearn==0.2.0 \
     psutil>=5.7.2
