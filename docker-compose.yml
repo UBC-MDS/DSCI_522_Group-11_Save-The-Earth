@@ -1,6 +1,6 @@
 services:
-  book-env:
-    image: test10
+  save-the-earth-env:
+    image: aish2712/dsci_522_group-11_save-the-earth:a456823
     ports:
       - "8889:8888"
     volumes:
@@ -9,3 +9,4 @@ services:
       resources:
         limits:
           memory: 5G
+    platform: linux/amd64 # For Mac M1/M2 chips
