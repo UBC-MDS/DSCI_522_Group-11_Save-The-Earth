@@ -18,4 +18,5 @@ RUN conda install -y \
 
 RUN pip install \
     mglearn==0.2.0 \
-    psutil>=5.7.2
+    psutil>=5.7.2 \
+    pytest==7.4.3
