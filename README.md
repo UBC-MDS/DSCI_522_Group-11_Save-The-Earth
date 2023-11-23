@@ -28,31 +28,34 @@ The final report can be found
 [here](https://github.com/UBC-MDS/DSCI_522_Group-11_Save-The-Earth/blob/main/src/save_the_earth_model.html).
 
 ## Dependencies
+Our project uses Docker to manage the software dependencies required. Please find the Docker image used for this project based on `quay.io/jupyter/minimal-notebook:2023-11-19` image. 
 
-  - Python 3.11.* and Python packages:
-    - ipykernel
-    - nb_conda_kernels
-    - altair=5.1.2
-    - vl-convert-python  # For saving altair charts as static images
-    - vegafusion  # For working with charts > 5,000 graphical objects
-    - vegafusion-python-embed  # Same as the previous one
-    - vegafusion-jupyter  # For working with charts > 100,000 graphical objects
-    - vega_datasets  # Altair example data
-    - scipy
-    - matplotlib>=3.2.2
-    - scikit-learn>=1.3.1
-    - requests>=2.24.0
-    - graphviz
-    - python-graphviz
-    - eli5
-    - shap
-    - jinja2
-    - selenium<4.3.0
-    - lightgbm
-    - pip:
-        - joblib==1.1.0
-        - mglearn
-        - psutil>=5.7.2
+The additional dependencies can be found in the [`Dockerfile`](Dockerfile)
+
+## Usage
+
+#### Setup
+
+1. [Install](https://www.docker.com/get-started/)
+
+2. Launch Docker on your local computer
+
+3. Clone this GitHub repository down to your local computer.
+
+#### Running the analysis
+
+1. At the root of this project on your local computer, please use the
+   command line tool (such as terminal) and enter the command below:
+
+``` 
+docker compose up
+```
+
+2. In the terminal, look for the URL that starts with 
+`http://127.0.0.1:8888/lab?token=` and copy/paste the URL to your website browser and change the "8888" to "8889" to avoid potential conflict with your other running Jupyter notebook.
+
+3. Open `src/breast_cancer_predict_report.ipynb` in Jupyter Lab launched on the website to run our analysis
+and under the "Kernel" menu click "Restart Kernel and Run All Cells...".
 
 ## License
 
