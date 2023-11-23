@@ -22,10 +22,15 @@ def test_create_scatter_plot_returns_chart():
 
 # Test for correct error handling for incorrect type of column value (not a string)
 def test_create_scatter_plot_type_error():
-    with pytest.raises(KeyError):
+    with pytest.raises(TypeError):
         create_scatter_plot(toy_dataset_1, 1, 'oil_g', 'country')
 
+# Test for correct error handling when a column doesn't exist in the DataFrame
+def test_create_scatter_plot_value_error():
+    with pytest.raises(ValueError):
+        create_scatter_plot(toy_dataset_1, 'z', 'y', 'color')
+
 # Test for correct error handling for incorrect object type (not a pandas data frame)
-def test_create_scatter_plot_attribute_error():
-    with pytest.raises(AttributeError):
+def test_create_scatter_plot_value_error_df():
+    with pytest.raises(ValueError):
         create_scatter_plot('toy_dataset_1', 'gas_g', 'oil_g', 'country')
