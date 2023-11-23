@@ -33,6 +33,13 @@ def create_scatter_plot(df, x_field, y_field, color_field, width=400, height=400
     >>> print(chart)
 
     """
+    # Check if width and height are positive
+    if width < 0 or height < 0:
+        raise ValueError("Width and height must be positive.")
+
+    if not isinstance(df, pd.DataFrame):
+        raise TypeError("Input should be a pandas DataFrame.")
+    
     # Create the scatter plot
     chart = alt.Chart(df).mark_circle().encode(
         x=x_field,
