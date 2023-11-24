@@ -1,6 +1,6 @@
 services:
   save-the-earth-env:
-    image: aish2712/dsci_522_group-11_save-the-earth:28bc2c9
+    image: aish2712/dsci_522_group-11_save-the-earth:d385666
     ports:
       - "8889:8888"
     volumes:
