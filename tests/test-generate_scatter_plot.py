@@ -22,10 +22,22 @@ def test_create_scatter_plot_returns_chart():
 
 # Test for correct error handling for incorrect type of column value (not a string)
 def test_create_scatter_plot_type_error():
-    with pytest.raises(KeyError):
+    with pytest.raises(TypeError):
         create_scatter_plot(toy_dataset_1, 1, 'oil_g', 'country')
 
+# Test for correct handling of non-string color_field
+def test_create_scatter_plot_non_string_color_field():
+    with pytest.raises(TypeError):
+        create_scatter_plot(toy_dataset_1, 'gas_g', 'oil_g', 123)
+
+# Test for correct handling of negative width and height
+def test_create_scatter_plot_negative_dimensions():
+    with pytest.raises(ValueError):
+        create_scatter_plot(toy_dataset_1, 'gas_g', 'oil_g', 'country', -400, 400)
+    with pytest.raises(ValueError):
+        create_scatter_plot(toy_dataset_1, 'gas_g', 'oil_g', 'country', 400, -400)
+
 # Test for correct error handling for incorrect object type (not a pandas data frame)
-def test_create_scatter_plot_attribute_error():
-    with pytest.raises(AttributeError):
+def test_create_scatter_plot_value_error_df():
+    with pytest.raises(TypeError):
         create_scatter_plot('toy_dataset_1', 'gas_g', 'oil_g', 'country')
