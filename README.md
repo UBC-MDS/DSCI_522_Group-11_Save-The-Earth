@@ -57,10 +57,29 @@ docker compose up
 3. Open `src/breast_cancer_predict_report.ipynb` in Jupyter Lab launched on the website to run our analysis
 and under the "Kernel" menu click "Restart Kernel and Run All Cells...".
 
-## Tests
+#### Clean up
+
+1. `Cntrl` + `C` in the terminal to shut down the container, then `docker compose rm` to clean up the resources
+
+## Developer notes
+
+#### Adding a new dependency
+
+1. To modify the `Dockerfile` and add the dependency to the `Dockerfile` file, please create a new branch.
+
+2. After updating the `Dockerfile`, proceed to build the Docker image locally.This step ensures that the Docker image is properly constructed and operates as expected.
+ 
+3. Upon successfully local building and testing of the Docker image, push the changes to GitHub. This action triggers an automatic build and push of a new Docker image to Docker Hub. The new image will carry a tag that corresponds to the SHA of that commit that instigated the change in the DOckerfile.
+
+4. Update the `docker-compose.yml` file on your branch with the new container image.
+
+5. After all the above steps are completed, please send a pull request to merge the changes into the `main` branch.
+
+
+#### Tests
 
 We have included tests and test data for functions used in our analysis in the tests folder. 
-The test suite can be run via the code below: 
+The test suite can be run at the root of the project via the code below: 
 
 ```
 pytest tests/*
