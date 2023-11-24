@@ -57,6 +57,15 @@ docker compose up
 3. Open `src/breast_cancer_predict_report.ipynb` in Jupyter Lab launched on the website to run our analysis
 and under the "Kernel" menu click "Restart Kernel and Run All Cells...".
 
+## Tests
+
+We have included tests and test data for functions used in our analysis in the tests folder. 
+The test suite can be run via the code below: 
+
+```
+pytest tests/*
+```
+
 ## License
 
 The Save The Earth materials here are licensed under the
