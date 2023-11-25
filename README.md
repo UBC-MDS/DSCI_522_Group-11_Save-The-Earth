@@ -70,7 +70,7 @@ docker compose up
     website browser and change the "8888" to "8889" to avoid potential
     conflict with your other running Jupyter notebook.
 
-3.  Open `src/breast_cancer_predict_report.ipynb` in Jupyter Lab
+3.  Open `src/save_the_earth_model.ipynb` in Jupyter Lab
     launched on the website to run our analysis and under the "Kernel"
     menu click "Restart Kernel and Run All Cells...".
 
