@@ -1,12 +1,6 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Save The Earth
 
-Author: Tony Shum, Jing Wen, Aishwarya Nadimpally, Weilin Han
+  - Author: Tony Shum, Jing Wen, Aishwarya Nadimpally, Weilin Han
 
 A data analysis group project for DSCI 522 (Data Science workflows); a
 course in the Master of Data Science program at the University of
@@ -120,18 +114,24 @@ re-using/re-mixing please provide attribution and link to this webpage.
 
 ## References
 
-::: {#refs .references .hanging-indent}
-::: {#ref-Dua2019}
+<div id="refs" class="references hanging-indent">
+
+<div id="ref-Dua2019">
+  
 Morice, C.P., J.J. Kennedy, N.A. Rayner, J.P. Winn, E. Hogan, R.E.
 Killick, R.J.H. Dunn, T.J. Osborn, P.D. Jones and I.R. Simpson (in
 press) An updated assessment of near-surface temperature change from
 1850: the HadCRUT5 dataset. Journal of Geophysical Research
 (Atmospheres)
-:::
 
-::: {#ref-Streetetal}
+</div>
+
+<div id="ref-Streetetal">
+  
 Hannah Ritchie, Max Roser and Pablo Rosado (2020) - "CO₂ and Greenhouse
 Gas Emissions". Published online at OurWorldInData.org. Retrieved from:
 '<https://ourworldindata.org/co2-and-greenhouse-gas-emissions>'
-:::
-:::
+
+</div>
+
+</div>
