@@ -14,7 +14,8 @@ RUN conda install -y \
     graphviz=9.0.0 \
     python-graphviz=0.20.1 \
     eli5=0.13.0 \
-    shap=0.43.0 
+    shap=0.43.0 \
+    click=8.1.7
 
 RUN pip install \
     mglearn==0.2.0 \
