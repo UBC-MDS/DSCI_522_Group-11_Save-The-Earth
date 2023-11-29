@@ -21,6 +21,7 @@ dependencies:
   - shap=0.43.0
   - click=8.1.7
   - jupyter-book=0.15.1
+  - vl-convert-python=1.1.0
   - pip:
     - mglearn==0.2.0
     - psutil>=5.7.2
