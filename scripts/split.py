@@ -22,7 +22,7 @@ def main(raw_data, data_to, random_state):
         df, test_size=0.20, random_state=random_state
     )
 
-    train_df.to_csv(os.path.join(data_to, "train_df.csv'"), index=True)
+    train_df.to_csv(os.path.join(data_to, "train_df.csv"), index=True)
     test_df.to_csv(os.path.join(data_to, "test_df.csv"), index=True)
 
 if __name__ == '__main__':
