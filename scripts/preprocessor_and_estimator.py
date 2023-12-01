@@ -135,7 +135,7 @@ def main (training_data, pipeline_to, results_to, seed):
         pipe_best_model,
         param_distributions=param_dist,
         cv=10,
-        n_iter=100,
+        n_iter=20,
         scoring=score_types,
         n_jobs=-1,
         refit="r2",

@@ -1,6 +1,6 @@
 services:
   save-the-earth-env:
-    image: aish2712/dsci_522_group-11_save-the-earth:d385666
+    image: aish2712/dsci_522_group-11_save-the-earth:09c676e
     ports:
       - "8889:8888"
     volumes:
@@ -8,5 +8,5 @@ services:
     deploy:
       resources:
         limits:
-          memory: 10G
+          memory: 15G
     platform: linux/amd64 # For Mac M1/M2 chips
