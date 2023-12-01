@@ -56,7 +56,7 @@ The additional dependencies can be found in the
     command line tool (such as terminal) and enter the command below:
 
 ```         
-docker compose up
+docker compose up jupyter-lab
 ```
 
 2.  In the terminal, look for the URL that starts with
@@ -64,9 +64,43 @@ docker compose up
     website browser and change the "8888" to "8889" to avoid potential
     conflict with your other running Jupyter notebook.
 
-3.  Open `src/save_the_earth_model.ipynb` in Jupyter Lab
-    launched on the website to run our analysis and under the "Kernel"
-    menu click "Restart Kernel and Run All Cells...".
+3.  To run the analysis,
+enter the following commands in the terminal in the project root:
+
+```
+# extract and clean data
+python scripts/data_fetch_clean.py \
+    --write-to=Data/Processed
+
+# split data into train and test sets
+python scripts/split.py \
+    --raw_data=Data/Processed/save_the_earth_processed_data.csv \
+    --data_to=Data/Processed
+
+# perform eda and save plots
+python scripts/eda.py \
+    --train_df=Data/Processed/train_df.csv \
+    --plot_to=results/figures
+
+# Perform preprocessor and estimator training
+python scripts/preprocessor_and_estimator.py \
+    --training_data=Data/Processed/train_df.csv \
+    --pipeline_to=results/models \
+    --results_to=results/tables \
+    --seed=522
+
+# Perform Evaluate scripts and results
+python scripts/evaluate-save-on-earth.py \
+    --train_data=Data/Processed/train_df.csv \
+    --test_data=Data/Processed/test_df.csv \
+    --pipeline_from=results/models/co2_pipeline.pickle \
+    --results_to=results \
+    --seed=123
+
+# build HTML report and copy build to docs folder
+jupyter-book build report
+cp -r report/_build/html/* docs
+```
 
 #### Clean up
 
