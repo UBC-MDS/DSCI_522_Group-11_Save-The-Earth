@@ -1,0 +1,10 @@
+title: "Predicting CO2 Emission Per Capita for a country using energy consumptions"
+author: "Tony Shum, Jing Wen, Aishwarya Nadimpally, Weilin Han"
+date: "2023-12-01"
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+execute:
+  execute_notebooks: force 
+bibtex_bibfiles:
+    - references.bib
