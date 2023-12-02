@@ -144,7 +144,7 @@ def main (training_data, pipeline_to, results_to, seed):
     )
     random_search.fit(X_train, y_train)
 
-    random_search_results_df = pd.DataFrame(random_search.cv_results_)[
+    random_search_results_df = pd.DataFrame(random_search.cv_results_).sort_values('mean_test_r2', ascending=False)[
         [
             "param_columntransformer__onehotencoder__max_categories",
             "param_kneighborsregressor__n_neighbors",
