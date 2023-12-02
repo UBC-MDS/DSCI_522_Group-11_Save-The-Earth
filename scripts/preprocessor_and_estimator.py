@@ -114,7 +114,8 @@ def main (training_data, pipeline_to, results_to, seed):
     cross_val_results_df = pd.concat(
         cross_val_results, axis="columns"
     )
-    cross_val_results_df.to_csv(os.path.join(results_to, "model_selection_scores.csv"), index=False)
+    cross_val_results_df.to_csv(os.path.join(results_to, "model_selection_scores.csv"), index=True)
+    cross_val_results_df.set_index(cross_val_results_df.columns[0], inplace=True)
 
     # Hyperparameter Optimization
     # List of hyperparameters
@@ -143,7 +144,7 @@ def main (training_data, pipeline_to, results_to, seed):
     )
     random_search.fit(X_train, y_train)
 
-    random_search_results_df = pd.DataFrame(random_search.cv_results_)[
+    random_search_results_df = pd.DataFrame(random_search.cv_results_).sort_values('mean_test_r2', ascending=False)[
         [
             "param_columntransformer__onehotencoder__max_categories",
             "param_kneighborsregressor__n_neighbors",
