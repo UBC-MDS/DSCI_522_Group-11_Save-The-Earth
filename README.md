@@ -8,18 +8,9 @@ British Columbia.
 
 ## About
 
-Here we attempt to build a prediction model using the k-nearest
-neighbours algorithm which can use energy consumption and energy
-generation measurements to predict CO2 emission of certain country of
-next year. Our final prediction model perform pretty well on unseen test
-dataset, with $R^2$ of 0.975 and an overall accuracy calculated to be
-0.976. However, the model predict CO2 emission by finding the existing
-cases in the training data set which is most similiar to unseen data,
-thus, if there is a case in unseen data set of which measurements are
-beyond the ranges in training data set (ie. massive increase of energy
-usage or energy efficiency increase or new type of clean energy), then
-the prediciton might not be accurate, thus we recomment continuing study
-to improve this prediction model.
+Here we attempt to build a prediction model employing the k-nearest neighbours algorithm, designed to leverage energy consumption and energy generation measurements to predict CO2 emissions of a country. Our model’s performance on the unseen test dataset is quite commendable, as reflected by an $R^2$ of 0.97.
+
+However, the model’s effectiveness lies in its ability to identify instances in the training dataset that closely resemble the data it is trying to predict. This means that when it encounters scenarios not represented in its training data, such as substantial shifts in energy usage or the introduction of new types of clean energy, its predictions may not be as accurate. Consequently, to tackle these potential limitations, it is advisable to continue research efforts to further enhance the model’s predictive capabilities.
 
 The data set that was used in this project is from World Bank via
 GAPMINDER.ORG, which is an independent Swedish foundation with no
