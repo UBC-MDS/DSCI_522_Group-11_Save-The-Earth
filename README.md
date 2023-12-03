@@ -151,36 +151,51 @@ re-using/re-mixing please provide attribution and link to this webpage.
 <div id="refs" class="references hanging-indent">
 
 <div>
+
 M Allen, OP Dube, W Solecki, F Aragón-Durand, W Cramer, S Humphreys, M Kainuma, and others. Special report: global warming of 1.5 c. Intergovernmental Panel on Climate Change (IPCC), 2018.
+
 </div>
 
 <div>
+
 Ekaba Bisong and Ekaba Bisong. Matplotlib and seaborn. Building Machine Learning and Deep Learning Models on Google Cloud Platform: A Comprehensive Guide for Beginners, pages 151–165, 2019.
+
 </div>
 
 <div>
+
 IEA Global Energy. Co2 status report 2017. international energy agency. 2017c. 2018.
 </div>
 
+
 <div>
+
 Wes McKinney. Data structures for statistical computing in python. In Stéfan van der Walt and Jarrod Millman, editors, Proceedings of the 9th Python in Science Conference, =51 – 56. 2010.
+
 </div>
 
 <div>
+
 Rajendra K Pachauri, Myles R Allen, Vicente R Barros, John Broome, Wolfgang Cramer, Renate Christ, John A Church, Leon Clarke, Qin Dahe, Purnamita Dasgupta, and others. Climate change 2014: synthesis report. Contribution of Working Groups I, II and III to the fifth assessment report of the Intergovernmental Panel on Climate Change. Ipcc, 2014.
+
 </div>
 
 <div>
+
 F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot, and E. Duchesnay. Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12:2825–2830, 2011.
+
 </div>
 
 <div>
+
 Guido Van Rossum and Fred L. Drake. Python 3 Reference Manual. CreateSpace, Scotts Valley, CA, 2009. ISBN 1441412697.
+
 </div>
 
 <div>
-Jake VanderPlas. Altair: interactive statistical visualizations for python. Journal of open source software, 3(7825):1057, 2018. URL:
-'<https://joss.theoj.org/papers/10.21105/joss.01057>'
+
+Jake VanderPlas. Altair: interactive statistical visualizations for python. Journal of open source software, 3(7825):1057, 2018.
+
 </div>
 
 </div>
