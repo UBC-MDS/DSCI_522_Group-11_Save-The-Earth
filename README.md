@@ -8,7 +8,7 @@ British Columbia.
 
 ## About
 
-Here we attempt to build a prediction model employing the k-nearest neighbours algorithm, designed to leverage energy consumption and energy generation measurements to predict CO2 emissions of a country. Our model’s performance on the unseen test dataset is quite commendable, as reflected by an $R^2$ of 0.97.
+Here we attempt to build a prediction model employing the k-nearest neighbours algorithm, designed to leverage energy consumption and energy generation measurements to predict CO2 emissions of a country. Understanding the correlation between consumption of various energy types and CO2 emission is critical for formulating policies aimed at reducing emissions and mitigating climate change impacts [Allen et al., 2018]. Our model’s performance on the unseen test dataset is quite commendable, as reflected by an $R^2$ of 0.97.
 
 However, the model’s effectiveness lies in its ability to identify instances in the training dataset that closely resemble the data it is trying to predict. This means that when it encounters scenarios not represented in its training data, such as substantial shifts in energy usage or the introduction of new types of clean energy, its predictions may not be as accurate. Consequently, to tackle these potential limitations, it is advisable to continue research efforts to further enhance the model’s predictive capabilities.
 
@@ -148,45 +148,3 @@ M Allen, OP Dube, W Solecki, F Aragón-Durand, W Cramer, S Humphreys, M Kainuma,
 </div>
 
 <div>
-
-Ekaba Bisong and Ekaba Bisong. Matplotlib and seaborn. Building Machine Learning and Deep Learning Models on Google Cloud Platform: A Comprehensive Guide for Beginners, pages 151–165, 2019.
-
-</div>
-
-<div>
-
-IEA Global Energy. Co2 status report 2017. international energy agency. 2017c. 2018.
-</div>
-
-
-<div>
-
-Wes McKinney. Data structures for statistical computing in python. In Stéfan van der Walt and Jarrod Millman, editors, Proceedings of the 9th Python in Science Conference, =51 – 56. 2010.
-
-</div>
-
-<div>
-
-Rajendra K Pachauri, Myles R Allen, Vicente R Barros, John Broome, Wolfgang Cramer, Renate Christ, John A Church, Leon Clarke, Qin Dahe, Purnamita Dasgupta, and others. Climate change 2014: synthesis report. Contribution of Working Groups I, II and III to the fifth assessment report of the Intergovernmental Panel on Climate Change. Ipcc, 2014.
-
-</div>
-
-<div>
-
-F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot, and E. Duchesnay. Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12:2825–2830, 2011.
-
-</div>
-
-<div>
-
-Guido Van Rossum and Fred L. Drake. Python 3 Reference Manual. CreateSpace, Scotts Valley, CA, 2009. ISBN 1441412697.
-
-</div>
-
-<div>
-
-Jake VanderPlas. Altair: interactive statistical visualizations for python. Journal of open source software, 3(7825):1057, 2018.
-
-</div>
-
-</div>
