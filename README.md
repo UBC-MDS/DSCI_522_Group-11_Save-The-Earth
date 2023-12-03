@@ -8,18 +8,9 @@ British Columbia.
 
 ## About
 
-Here we attempt to build a prediction model using the k-nearest
-neighbours algorithm which can use energy consumption and energy
-generation measurements to predict CO2 emission of certain country of
-next year. Our final prediction model perform pretty well on unseen test
-dataset, with $R^2$ of 0.975 and an overall accuracy calculated to be
-0.976. However, the model predict CO2 emission by finding the existing
-cases in the training data set which is most similiar to unseen data,
-thus, if there is a case in unseen data set of which measurements are
-beyond the ranges in training data set (ie. massive increase of energy
-usage or energy efficiency increase or new type of clean energy), then
-the prediciton might not be accurate, thus we recomment continuing study
-to improve this prediction model.
+Here we attempt to build a prediction model employing the k-nearest neighbours algorithm, designed to leverage energy consumption and energy generation measurements to predict CO2 emissions of a country. Our model’s performance on the unseen test dataset is quite commendable, as reflected by an $R^2$ of 0.97.
+
+However, the model’s effectiveness lies in its ability to identify instances in the training dataset that closely resemble the data it is trying to predict. This means that when it encounters scenarios not represented in its training data, such as substantial shifts in energy usage or the introduction of new types of clean energy, its predictions may not be as accurate. Consequently, to tackle these potential limitations, it is advisable to continue research efforts to further enhance the model’s predictive capabilities.
 
 The data set that was used in this project is from World Bank via
 GAPMINDER.ORG, which is an independent Swedish foundation with no
@@ -29,7 +20,7 @@ political, religious or economic affiliations and the link can be found
 ## Report
 
 The final report can be found
-[here](https://weilinhan8.github.io/save_the_earth_model.html).
+[here](https://ubc-mds.github.io/DSCI_522_Group-11_Save-The-Earth/save_the_earth_model.html).
 
 ## Dependencies
 
@@ -150,21 +141,51 @@ re-using/re-mixing please provide attribution and link to this webpage.
 
 <div id="refs" class="references hanging-indent">
 
-<div id="ref-Dua2019">
-  
-Morice, C.P., J.J. Kennedy, N.A. Rayner, J.P. Winn, E. Hogan, R.E.
-Killick, R.J.H. Dunn, T.J. Osborn, P.D. Jones and I.R. Simpson (in
-press) An updated assessment of near-surface temperature change from
-1850: the HadCRUT5 dataset. Journal of Geophysical Research
-(Atmospheres)
+<div>
+
+M Allen, OP Dube, W Solecki, F Aragón-Durand, W Cramer, S Humphreys, M Kainuma, and others. Special report: global warming of 1.5 c. Intergovernmental Panel on Climate Change (IPCC), 2018.
 
 </div>
 
-<div id="ref-Streetetal">
-  
-Hannah Ritchie, Max Roser and Pablo Rosado (2020) - "CO₂ and Greenhouse
-Gas Emissions". Published online at OurWorldInData.org. Retrieved from:
-'<https://ourworldindata.org/co2-and-greenhouse-gas-emissions>'
+<div>
+
+Ekaba Bisong and Ekaba Bisong. Matplotlib and seaborn. Building Machine Learning and Deep Learning Models on Google Cloud Platform: A Comprehensive Guide for Beginners, pages 151–165, 2019.
+
+</div>
+
+<div>
+
+IEA Global Energy. Co2 status report 2017. international energy agency. 2017c. 2018.
+</div>
+
+
+<div>
+
+Wes McKinney. Data structures for statistical computing in python. In Stéfan van der Walt and Jarrod Millman, editors, Proceedings of the 9th Python in Science Conference, =51 – 56. 2010.
+
+</div>
+
+<div>
+
+Rajendra K Pachauri, Myles R Allen, Vicente R Barros, John Broome, Wolfgang Cramer, Renate Christ, John A Church, Leon Clarke, Qin Dahe, Purnamita Dasgupta, and others. Climate change 2014: synthesis report. Contribution of Working Groups I, II and III to the fifth assessment report of the Intergovernmental Panel on Climate Change. Ipcc, 2014.
+
+</div>
+
+<div>
+
+F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot, and E. Duchesnay. Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12:2825–2830, 2011.
+
+</div>
+
+<div>
+
+Guido Van Rossum and Fred L. Drake. Python 3 Reference Manual. CreateSpace, Scotts Valley, CA, 2009. ISBN 1441412697.
+
+</div>
+
+<div>
+
+Jake VanderPlas. Altair: interactive statistical visualizations for python. Journal of open source software, 3(7825):1057, 2018.
 
 </div>
 
