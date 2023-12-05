@@ -3,7 +3,7 @@
 import pandas as pd
 
 
-def read_melt_merge(data_files_names, col_names, path='../Data/Raw/', id_variable='country', variable_name='year'):
+def read_melt_merge(data_files_names, col_names, path='../data/raw/', id_variable='country', variable_name='year'):
     """
     Read csv files to create pandas DataFrames.
 
