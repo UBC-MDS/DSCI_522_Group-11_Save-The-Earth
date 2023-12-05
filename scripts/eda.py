@@ -29,7 +29,8 @@ def main(train_df, plot_to):
     train_df = pd.read_csv(train_df, index_col=0)
 
     # Distributions for all numerical columns
-    train_df.hist(bins=50, figsize=(20, 15));   
+    train_df.hist(bins=50, figsize=(20, 15));  
+    plt.gcf().suptitle('Histogram of Numeric Columns') 
     
     plt.gcf().savefig(os.path.join(plot_to, "histogram_by_numeric_cols.png"))
 
