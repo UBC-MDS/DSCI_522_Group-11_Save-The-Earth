@@ -17,7 +17,8 @@ RUN conda install -y \
     shap=0.43.0 \
     click=8.1.7 \
     jupyter-book=0.15.1 \
-    vl-convert-python=1.1.0 
+    vl-convert-python=1.1.0 \
+    make=4.2.1
 
 RUN pip install \
     mglearn==0.2.0 \
