@@ -23,6 +23,26 @@ from sklearn.svm import SVR
 def data_preprocessor(drop_feats=None, passthrough_feats=None, categorical_feats=None, numerical_feats=None):
     """
     Create Sklearn Column Transformer to drop, passthrough, encode and scale specified features
+
+    Parameters:
+    ----------
+    drop_feats : list
+        The columns to drop in the fitting DataFrame
+    passthrough_feats : list
+        The columns to passthrough in the fitting DataFrame
+    categorical_feats : list
+        The columns to encode with Sklearn OneHotEncoder in the fitting DataFrame
+    numerical_feats : list
+        The columns to scale with Sklearn StandardScaler in the fitting DataFrame
+
+    Returns:
+    -------
+    sklearn.compose._column_transformer.ColumnTransformer
+        A Sklearn Column Transformer to fit and transform the target DataFrame with the specified preprocessors and columns
+        
+    Examples:
+    --------
+    >>> preprocessor = data_preprocessor(drop_feats=['col1'], passthrough_feats=['col2'], categorical_feats=['col3'], numerical_feats=['col4'])
     """
     steps = []
     if drop_feats is not None:
@@ -48,6 +68,29 @@ def data_preprocessor(drop_feats=None, passthrough_feats=None, categorical_feats
 def main (training_data, pipeline_to, results_to, seed):
     """
     Select and Train the preprocessor and estimator for co2 per capita prediction on the training data
+
+    Parameters:
+    ----------
+    training_data : str
+        The path of the training data csv file
+    pipeline_to : str
+        The directory where the pipeline object should be exported to
+    results_to : str
+        The directory where the result data should be exported to
+    seed : int
+        The seed used for the pipeline. 522 by default
+
+    Returns:
+    -------
+    None
+        
+    Examples:
+    --------
+    >>> $ python scripts/preprocessor_and_estimator.py \
+            --training_data=Data/Processed/train_df.csv \
+            --pipeline_to=results/models \
+            --results_to=results/tables \
+            --seed=522
     """
     np.random.seed(seed)
 
