@@ -1,4 +1,4 @@
-This outlines how to propose a change to the Save the Earth project.
+This outlines how to propose a change to the Save the Earth projdect.
 
 ### Fixing typos
 
@@ -11,6 +11,8 @@ Before making a significant pull request, it's important to first raise an issue
 ensure someone from the team acknowledges it as a problem. If you've discovered a
 bug, create a related issue and demonstrate the bug with precise language.
 *  Open an Issue: You can report bugs or suggest features [here](https://github.com/UBC-MDS/DSCI_522_Group-11_Save-The-Earth/issues).
+*  Adding Description: Please add description about your suggestion and bugs need to be fixed.
+*  Addign Assignee: Plese assign the issue to the main contributor if you know who to assign, otherwise, feel free to leave it blank.
 
 ### Pull request procedure
 
