@@ -47,7 +47,7 @@ The additional dependencies can be found in the
     command line tool (such as terminal) and enter the command below:
 
 ```         
-docker compose up jupyter-lab
+docker compose up
 ```
 
 2.  In the terminal, look for the URL that starts with
