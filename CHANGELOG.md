@@ -13,7 +13,7 @@ This document outlines the improvements and changes made to the project based on
     - eda.py: [commit](e5cb8ea385ada1312b98c5accd1dea40946c4fc5) and [pull request](https://github.com/UBC-MDS/DSCI_522_Group-11_Save-The-Earth/pull/62)
     - split.py: [commit](e5cb8ea385ada1312b98c5accd1dea40946c4fc5) and [pull request](https://github.com/UBC-MDS/DSCI_522_Group-11_Save-The-Earth/pull/62)
     - preprocessor_and_estimator.py: [commit](d0eb5c790feba2c004f9892ace8c1225acc43939) and [pull request](https://github.com/UBC-MDS/DSCI_522_Group-11_Save-The-Earth/pull/60)
-    - evaluate-save-on-earth.py: [commit]() and [pull request]()
+    - evaluate-save-on-earth.py: [commit](9dea5d9244020a0ab5c9443e6c1607445fc73cf8) and [pull request](https://github.com/UBC-MDS/DSCI_522_Group-11_Save-The-Earth/pull/64)
 
 - Update EDA plots as per the [feedback](https://github.com/UBC-MDS/data-analysis-review-2023/issues/10#issuecomment-1841537272). You can find more details in [pull request](https://github.com/UBC-MDS/DSCI_522_Group-11_Save-The-Earth/pull/62) and [commit](e5cb8ea385ada1312b98c5accd1dea40946c4fc5)
 
