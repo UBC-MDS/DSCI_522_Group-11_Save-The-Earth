@@ -16,8 +16,38 @@ import matplotlib.pyplot as plt
 @click.option('--seed', type=int, help="Random seed", default=123)
 
 def main(train_data,test_data, columns_to_drop, pipeline_from, results_to, seed):
-    '''Evaluates the co2 emission using regression on the test data 
-    and saves the evaluation results.'''
+    """Evaluates the co2 emission using regression on the test data 
+    and saves the evaluation results.
+
+    Parameters:
+    -----------
+    train_data : str
+        The path of the training data csv file
+    test_data : str
+        The path of the test data csv file
+    columns_to_drop : list, optional
+        Give the list of columns to drop
+    pipeline_from : str
+        The path of the pipeline model
+    results_to : str
+        The path of directory where the results need to be stored
+    seed : int
+        The seed used for the evaluation, default is 123
+
+    Returns:
+    --------
+    None
+
+    Examples:
+    ---------
+    >>> $ python scripts/evaluate-save-on-earth.py \
+            --train_data=Data/Processed/train_df.csv \
+            --test_data=Data/Processed/test_df.csv \
+            --pipeline_from=results/models/co2_pipeline.pickle \
+            --results_to=results \
+            --seed=123
+
+    """
     np.random.seed(seed)
     # set_config(transform_output="pandas")
 
