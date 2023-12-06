@@ -8,10 +8,18 @@ import os
 def read_melt_merge(data_files_names, col_names, path='./data/raw/', id_variable='country', variable_name='year'):
     """
     Read csv files to create pandas DataFrames.
-
     Melt wide pandas DataFrames from wide table to long table.
-
     Merge melted pandas DataFrames.
+
+    Keyword arguments:
+    data_file_names -- a list of string of names of all data files. the data has to be in the same format
+    col_names -- a list of string of the names of all columns after melt
+    path -- path to store the final output csv file (default is './data/raw/')
+    id_variable -- the column that based on to melt the data (default is 'country')
+    variable_name -- the column that based on to melt the data (default is 'year')
+
+    output:
+    a csv file that store in the target folder
     """
     # Read Data
     sub_df_list = []
