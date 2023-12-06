@@ -13,27 +13,36 @@ import matplotlib.pyplot as plt
 @click.option('--plot_to', type=str, help="Path to directory where the plot will be written to")
 
 def main(train_df, plot_to):
-    '''Plots the distribution of each feature in the processed training data
-        by data type and country. Also saves the plot.'''
+    '''
+    Plots the distribution of each feature in the processed training data 
+    by data type and country. Also saves the plot.
+
+    Parameters
+    ----------
+    train_df : str
+    A string representing the path to the processed training data in CSV format.
+
+    plot_to : str
+    A string representing the path to the directory where the plot will be saved.
+    '''
 
     train_df = pd.read_csv(train_df, index_col=0)
 
     # Distributions for all numerical columns
-    train_df.hist(bins=50, figsize=(20, 15));   
+    train_df.iloc[:, 2:].hist(bins=50, figsize=(20, 15));  
+    plt.gcf().suptitle('Distribution of energy consumption data per energy type') 
     
     plt.gcf().savefig(os.path.join(plot_to, "histogram_by_numeric_cols.png"))
 
     # Distribution for each country
     country_dist = alt.Chart(train_df).mark_bar().encode(
-        alt.X('year').bin(maxbins=10),
-        y='count()'
+        x = alt.X('year', title = "Year").bin(maxbins=10),
+        y=alt.Y('count()', title='Count')
     ).properties(
         width=100,
         height=100
-    ).facet(
-        'country',
-        columns=6
-    )
+    ).facet(facet=alt.Facet('country:N', 
+                            title="Available energy consumption data per country"), columns=6)
 
     country_dist.save(os.path.join(plot_to, "histogram_by_country.png"))
 
