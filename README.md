@@ -35,7 +35,7 @@ The additional dependencies can be found in the
 
 #### Setup
 
-1.  [Install](https://www.docker.com/get-started/)
+1.  [Install](https://www.docker.com/get-started/) and launch Docker on your computer.
 
 2.  Launch Docker on your local computer
 
@@ -47,7 +47,7 @@ The additional dependencies can be found in the
     command line tool (such as terminal) and enter the command below:
 
 ```         
-docker compose up jupyter-lab
+docker compose up
 ```
 
 2.  In the terminal, look for the URL that starts with
@@ -55,42 +55,43 @@ docker compose up jupyter-lab
     website browser and change the "8888" to "8889" to avoid potential
     conflict with your other running Jupyter notebook.
 
-3.  To run the analysis,
-enter the following commands in the terminal in the project root:
+3.  To run the analysis, enter the following commands in the terminal in the project root:
 
 ```
+# navigate to project root directory
+cd work
+
 # extract and clean data
 python scripts/data_fetch_clean.py \
-    --write-to=Data/Processed
+    --write-to=data/processed
 
 # split data into train and test sets
 python scripts/split.py \
-    --raw_data=Data/Processed/save_the_earth_processed_data.csv \
-    --data_to=Data/Processed
+    --raw_data=data/processed/save_the_earth_processed_data.csv \
+    --data_to=data/processed
 
 # perform eda and save plots
 python scripts/eda.py \
-    --train_df=Data/Processed/train_df.csv \
+    --train_df=data/processed/train_df.csv \
     --plot_to=results/figures
 
 # Perform preprocessor and estimator training
 python scripts/preprocessor_and_estimator.py \
-    --training_data=Data/Processed/train_df.csv \
+    --training_data=data/processed/train_df.csv \
     --pipeline_to=results/models \
     --results_to=results/tables \
     --seed=522
 
 # Perform Evaluate scripts and results
 python scripts/evaluate-save-on-earth.py \
-    --train_data=Data/Processed/train_df.csv \
-    --test_data=Data/Processed/test_df.csv \
+    --train_data=data/processed/train_df.csv \
+    --test_data=data/processed/test_df.csv \
     --pipeline_from=results/models/co2_pipeline.pickle \
     --results_to=results \
     --seed=123
 
-# build HTML report and copy build to docs folder
+# build HTML report
 jupyter-book build report
-cp -r report/_build/html/* docs
 ```
 
 #### Clean up
