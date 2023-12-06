@@ -29,8 +29,8 @@ def main(train_df, plot_to):
     train_df = pd.read_csv(train_df, index_col=0)
 
     # Distributions for all numerical columns
-    train_df.hist(bins=50, figsize=(20, 15));  
-    plt.gcf().suptitle('Histogram of Numeric Columns') 
+    train_df.iloc[:, 2:].hist(bins=50, figsize=(20, 15));  
+    plt.gcf().suptitle('Distribution of energy consumption data per energy type') 
     
     plt.gcf().savefig(os.path.join(plot_to, "histogram_by_numeric_cols.png"))
 
@@ -40,8 +40,7 @@ def main(train_df, plot_to):
         y=alt.Y('count()', title='Count')
     ).properties(
         width=100,
-        height=100,
-        title="Available energy consumption data per country"
+        height=100
     ).facet(facet=alt.Facet('country:N', 
                             title="Available energy consumption data per country"), columns=6)
 
