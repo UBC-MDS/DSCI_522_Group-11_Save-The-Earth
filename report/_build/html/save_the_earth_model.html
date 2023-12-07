@@ -315,6 +315,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#methods">Methods</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#credential">Credential</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-wrangling">Data Wrangling</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
@@ -369,10 +370,28 @@ document.write(`
 <!-- BEGIN QUESTION -->
 <section id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
-<p>The data set that was used in this project is from World Bank via <a class="reference external" href="http://GAPMINDER.ORG">GAPMINDER.ORG</a>, which is an independent Swedish foundation with no political, religious or economic affiliations and the link can be found <a class="reference external" href="https://www.gapminder.org/">https://www.gapminder.org/</a>. Each row in the data set represents a consumption of a certain energy for a certain country at a given year.</p>
+<p>The data set that was used in this project is from World Bank via <a class="reference external" href="http://GAPMINDER.ORG">GAPMINDER.ORG</a>, which is an independent Swedish foundation with no political, religious or economic affiliations and the link can be found <a class="reference external" href="https://www.gapminder.org/">https://www.gapminder.org/</a>.</p>
 <section id="credential">
 <h3>Credential<a class="headerlink" href="#credential" title="Permalink to this heading">#</a></h3>
 <p>FREE DATA FROM WORLD BANK VIA <a class="reference external" href="http://GAPMINDER.ORG">GAPMINDER.ORG</a>, CC-BY LICENSE</p>
+</section>
+<section id="data-wrangling">
+<h3>Data Wrangling<a class="headerlink" href="#data-wrangling" title="Permalink to this heading">#</a></h3>
+<p>The final processed dataset was merged from nine publicly available datasets and consists of CO2 emissions, energy consumption, and energy generation for countries that have at least one year of records up to 2022.</p>
+<p>Here are the list of raw datasets:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">co2_emissions_tonnes_per_person.csv</span></code>: CO2 emission per capita by year and country. Records are available for 194 countries tracing back to 1800.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">coal_consumption_per_cap.csv</span></code>: Coal consumption per capita by year and country. Records are available for 79 countries tracing back to 1965.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">electricity_generation_per_person.csv</span></code>: Electricity generation per capita by year and country. Records are available for 79 countries tracing back to 1985.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">electricity_use_per_person.csv</span></code>: Electricity consumption per capita by year and country. Records are available for 142 countries tracing back to 1965.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hydro_power_generation_per_person.csv</span></code>: Hydro energy generation per capita by year and country. Records are available for 119 countries tracing back to 1960.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">natural_gas_production_per_person.csv</span></code>: Gas generation per capita by year and country. Records are available for 49 countries tracing back to 1970.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nuclear_power_generation_per_person.csv</span></code>: Nuclear generation per capita by year and country. Records are available for 31 countries tracing back to 1960.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oil_consumption_per_cap.csv</span></code>: Oil consumption per capita by year and country. Records are available for 79 countries tracing back to 1965.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oil_production_per_person.csv</span></code>: Oil generation per capita by year and country. Records are available for 49 countries tracing back to 1965.</p></li>
+</ul>
+<p>After melting the aforementioned datasets into a long format and merging them all based on country and year, the final raw data consist of 11 columns: year, country, <code class="docutils literal notranslate"><span class="pre">co2_e</span></code>(co2 emission per capita), <code class="docutils literal notranslate"><span class="pre">coal_c</span></code>(coal consumption per capita), <code class="docutils literal notranslate"><span class="pre">elec_g</span></code>(electricity generation per capita), <code class="docutils literal notranslate"><span class="pre">elec_c</span></code>(electricity consumption per capita), <code class="docutils literal notranslate"><span class="pre">hydro_g</span></code>(hydro generation per capita), <code class="docutils literal notranslate"><span class="pre">nuclear_g</span></code>(nuclear generation per capita), <code class="docutils literal notranslate"><span class="pre">gas_g</span></code>(gas generation per capita), <code class="docutils literal notranslate"><span class="pre">oil_c</span></code>(oil consumption per capita), <code class="docutils literal notranslate"><span class="pre">oil_g</span></code>(oil generation per capita).</p>
+<p>Considering the differences of geological structure and technology advancement among countries, we only removed instances that have no records of <code class="docutils literal notranslate"><span class="pre">co2_e</span></code>, <code class="docutils literal notranslate"><span class="pre">coal_c</span></code>, <code class="docutils literal notranslate"><span class="pre">elec_c</span></code> and <code class="docutils literal notranslate"><span class="pre">oil_c</span></code>, since it’s reasonable that some countries don’t have capability to produce energy. For these missing values, we replace <code class="docutils literal notranslate"><span class="pre">NaN</span></code> with <code class="docutils literal notranslate"><span class="pre">0</span></code>. There’s no explanation from data source about the specific electricity types in <code class="docutils literal notranslate"><span class="pre">elec_g</span></code>, so there’s a possibility that <code class="docutils literal notranslate"><span class="pre">elec_g</span></code> consists of <code class="docutils literal notranslate"><span class="pre">hydro_g</span></code> or <code class="docutils literal notranslate"><span class="pre">nuclear_g</span></code>.</p>
 </section>
 </section>
 <section id="analysis">
@@ -386,7 +405,7 @@ document.write(`
 <h2>Exploratory Data Analysis (EDA)<a class="headerlink" href="#exploratory-data-analysis-eda" title="Permalink to this heading">#</a></h2>
 <p>First, we carried out a cleanup of data types and standardized the units for energy consumption. We then generated histograms (<a class="reference internal" href="#histogram-by-numeric-cols"><span class="std std-numref">Figure 1</span></a>)for each energy type within the training dataset to gain a comprehensive understanding of our feature distributions and to identify potential outliers. It was observed that the scales for each energy type varied significantly, indicating a need to standardize these scales prior to model construction.</p>
 <figure class="align-default" id="histogram-by-numeric-cols">
-<a class="reference internal image-reference" href="_images/histogram_by_numeric_cols.png"><img alt="_images/histogram_by_numeric_cols.png" src="_images/histogram_by_numeric_cols.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/histogram_by_numeric_cols.png"><img alt="_images/histogram_by_numeric_cols.png" src="_images/histogram_by_numeric_cols.png" style="width: 800px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text">Number of records of all numeric features.</span><a class="headerlink" href="#histogram-by-numeric-cols" title="Permalink to this image">#</a></p>
 <div class="legend">
@@ -521,6 +540,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#methods">Methods</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#credential">Credential</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-wrangling">Data Wrangling</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
